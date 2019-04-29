@@ -22,10 +22,17 @@ export class CusModalService {
   }
 
   showConfirm(title: string, msg: string) {
-    const modalRef = this.modalService.open(CusModalMsgComponent, {size:'sm'});
+    const modalRef = this.modalService.open(CusModalMsgComponent, {size:'sm', backdrop:'static'});
     modalRef.componentInstance.title = title;
     modalRef.componentInstance.msg = msg;
     modalRef.componentInstance.isConfirm = true;
+    return modalRef.result;
+  }
+
+  showBackdrop(title: string, msg: string) {
+    const modalRef = this.modalService.open(CusModalMsgComponent, {size:'sm', backdrop:'static'});
+    modalRef.componentInstance.title = title;
+    modalRef.componentInstance.msg = msg;
     return modalRef.result;
   }
 
