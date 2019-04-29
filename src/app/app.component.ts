@@ -25,10 +25,14 @@ export class AppComponent  {
 
   cusOpen() {
     this.cusModalService.showMsg("標題", "登入成功!!!!");
-    // const modalRef = this.modalService.open(CusModalMsgComponent);
-    // modalRef.componentInstance.title = 'aaa123';
-    // modalRef.componentInstance.content = '我是內容!!!!!!!!!!';
+  }
 
+  cusSmOpen() {
+    this.cusModalService.showMsgSm("系統訊息", "登入成功!!!!");
+  }
+
+  confirmOpen() {
+    // this.showConfirm();
   }
 
   private getDismissReason(reason: any): string {

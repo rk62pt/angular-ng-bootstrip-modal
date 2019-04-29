@@ -14,4 +14,14 @@ export class CusModalService {
     modalRef.componentInstance.msg = msg;
   }
 
+  showMsgSm(title: string, msg: string) {
+    const modalRef = this.modalService.open(CusModalMsgComponent, {size:'sm'});
+    modalRef.componentInstance.title = title;
+    modalRef.componentInstance.msg = msg;
+  }
+
+  showConfirm() {
+    
+  }
+
 }

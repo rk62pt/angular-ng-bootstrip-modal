@@ -1,7 +1,17 @@
 <hello name="{{ name }}"></hello>
 <p>
-  Start editing to see some magic happen :)
-  <button class="btn btn-lg btn-outline-primary" (click)="cusOpen()">Launch demo modal</button>
+  :)
+  <button class="btn btn-lg btn-outline-primary" (click)="cusOpen()">default modal</button>
+</p>
+
+<p>
+  Samll button :)
+  <button class="btn btn-lg btn-outline-primary" (click)="cusSmOpen()">Samll button</button>
+</p>
+
+<p>
+  confirm :)
+  <button class="btn btn-lg btn-outline-primary" (click)="confirmOpen()">confirm</button>
 </p>
 <ng-template #content let-modal>
   <div class="modal-header">
