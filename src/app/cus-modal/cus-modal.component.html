@@ -10,7 +10,9 @@
       <ng-content></ng-content>
     </div>
     <div class="modal-footer">
-      <button type="button" class="btn btn-outline-dark" (click)="activeModal.close('Close click')">關閉</button>
+      <button type="button" *ngIf="!isConfirm" class="btn btn-outline-dark" (click)="activeModal.close('Close click')">關閉</button>
+      <button type="button" *ngIf="isConfirm" class="btn btn-outline-secondary" (click)="activeModal.dismiss('cancel click')">否</button>
+      <button type="button" *ngIf="isConfirm" ngbAutofocus class="btn btn-primary" (click)="activeModal.close('Y')">是</button>
     </div>
   </div>
 </div>

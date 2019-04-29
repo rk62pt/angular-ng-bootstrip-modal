@@ -18,10 +18,15 @@ export class CusModalService {
     const modalRef = this.modalService.open(CusModalMsgComponent, {size:'sm'});
     modalRef.componentInstance.title = title;
     modalRef.componentInstance.msg = msg;
+    return modalRef.result;
   }
 
-  showConfirm() {
-    
+  showConfirm(title: string, msg: string) {
+    const modalRef = this.modalService.open(CusModalMsgComponent, {size:'sm'});
+    modalRef.componentInstance.title = title;
+    modalRef.componentInstance.msg = msg;
+    modalRef.componentInstance.isConfirm = true;
+    return modalRef.result;
   }
 
 }

@@ -11,9 +11,12 @@ export class CusModalMsgComponent implements OnInit {
 
   @Input() msg = `Information`;
 
+  @Input() isConfirm;
+
   constructor() { }
 
   ngOnInit() {
+    console.log(this.isConfirm);
   }
 
 }

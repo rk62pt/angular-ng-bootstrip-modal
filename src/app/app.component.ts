@@ -28,11 +28,19 @@ export class AppComponent  {
   }
 
   cusSmOpen() {
-    this.cusModalService.showMsgSm("系統訊息", "登入成功!!!!");
+    this.cusModalService.showMsgSm("系統訊息", "登入成功!!!!").then((result) => {
+    console.log(`Closed with: ${result}`);
+    }, (reason) => {
+        console.log(`Dismissed ${this.getDismissReason(reason)}`);
+    });
   }
 
   confirmOpen() {
-    // this.showConfirm();
+     this.cusModalService.showConfirm("系統訊息", "登入成功!!!!").then((result) => {
+          console.log(`Closed with: ${result}`);
+      }, (reason) => {
+          console.log(`Dismissed ${this.getDismissReason(reason)}`);
+      });
   }
 
   private getDismissReason(reason: any): string {

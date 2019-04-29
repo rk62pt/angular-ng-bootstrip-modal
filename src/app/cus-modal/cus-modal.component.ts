@@ -11,12 +11,14 @@ export class CusModalComponent implements OnInit {
 
   @Input() title = `Information`;
 
+  @Input() isConfirm;
+
   constructor(
     public activeModal: NgbActiveModal
   ) {}
 
   ngOnInit() {
-    console.log(this.title);
+    console.log(this.isConfirm);
   }
 
 }
