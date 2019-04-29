@@ -9,7 +9,7 @@ export class CusModalMsgComponent implements OnInit {
 
   @Input() title = `Information`;
 
-  @Input() content = `Information`;
+  @Input() msg = `Information`;
 
   constructor() { }
 

@@ -8,10 +8,10 @@ export class CusModalService {
 
   constructor(private modalService: NgbModal) { }
 
-  showMsg(title: string, content: string) {
+  showMsg(title: string, msg: string) {
     const modalRef = this.modalService.open(CusModalMsgComponent);
     modalRef.componentInstance.title = title;
-    modalRef.componentInstance.content = content;
+    modalRef.componentInstance.msg = msg;
   }
 
 }
