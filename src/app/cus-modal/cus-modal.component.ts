@@ -18,7 +18,7 @@ export class CusModalComponent implements OnInit {
   ) {}
 
   ngOnInit() {
-    console.log(this.isConfirm);
+
   }
 
 }

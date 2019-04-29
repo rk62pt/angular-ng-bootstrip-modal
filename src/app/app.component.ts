@@ -28,16 +28,13 @@ export class AppComponent  {
   }
 
   cusSmOpen() {
-    this.cusModalService.showMsgSm("系統訊息", "登入成功!!!!").then((result) => {
-    console.log(`Closed with: ${result}`);
-    }, (reason) => {
-        console.log(`Dismissed ${this.getDismissReason(reason)}`);
-    });
+    this.cusModalService.showMsgSm("系統訊息", "登入成功!!!!");
   }
 
   confirmOpen() {
-     this.cusModalService.showConfirm("系統訊息", "登入成功!!!!").then((result) => {
+     this.cusModalService.showConfirm("系統訊息", "是否確認刪除!!!!").then((result) => {
           console.log(`Closed with: ${result}`);
+          this.cusModalService.showMsgSm("系統訊息", "資料已刪除!!!!");
       }, (reason) => {
           console.log(`Dismissed ${this.getDismissReason(reason)}`);
       });

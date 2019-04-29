@@ -16,7 +16,6 @@ export class CusModalMsgComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    console.log(this.isConfirm);
   }
 
 }
