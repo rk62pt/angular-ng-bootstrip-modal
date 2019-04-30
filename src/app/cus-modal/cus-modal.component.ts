@@ -11,6 +11,8 @@ export class CusModalComponent implements OnInit {
 
   @Input() title = `Information`;
 
+  @Input() msg = `Information`;
+
   @Input() isConfirm;
 
   constructor(

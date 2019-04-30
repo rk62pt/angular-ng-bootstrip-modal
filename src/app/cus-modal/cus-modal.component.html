@@ -8,6 +8,7 @@
     </div>
     <div class="modal-body">
       <ng-content></ng-content>
+      {{ msg }}
     </div>
     <div class="modal-footer">
       <button type="button" *ngIf="!isConfirm" class="btn btn-outline-dark" (click)="activeModal.close('Close click')">關閉</button>

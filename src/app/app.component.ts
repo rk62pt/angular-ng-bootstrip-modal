@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import {NgbModal, ModalDismissReasons, NgbActiveModal} from '@ng-bootstrap/ng-bootstrap';
 import { CusModalComponent } from './cus-modal/cus-modal.component';
-import { CusModalMsgComponent } from './cus-modal-msg/cus-modal-msg.component';
 import { CusModalService } from './cus-modal.service';
 
 @Component({

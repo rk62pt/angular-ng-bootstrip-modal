@@ -6,16 +6,14 @@ import { AppComponent } from './app.component';
 import { HelloComponent } from './hello.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { CusModalComponent } from './cus-modal/cus-modal.component';
-import { CusModalMsgComponent } from './cus-modal-msg/cus-modal-msg.component';
 import { CusModalService } from './cus-modal.service';
+import { CusModalModule } from './cus-modal/cus-modal.module';
 
 @NgModule({
-  imports:      [ BrowserModule, FormsModule, NgbModule.forRoot() ],
-  declarations: [ AppComponent, HelloComponent, CusModalComponent, CusModalMsgComponent ],
-  entryComponents: [
-    CusModalMsgComponent
-  ],
+  imports: [ BrowserModule, FormsModule, CusModalModule ],
+  declarations: [ AppComponent, HelloComponent, CusModalComponent, ],
+  entryComponents: [],
   bootstrap:    [ AppComponent ],
-  providers: [CusModalService]
+  providers: [ CusModalService ]
 })
 export class AppModule { }
