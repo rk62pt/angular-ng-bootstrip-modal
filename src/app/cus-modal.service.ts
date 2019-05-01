@@ -35,4 +35,12 @@ export class CusModalService {
     return modalRef.result;
   }
 
+  showLockMsg(title: string, msg: string) {
+    const modalRef = this.modalService.open(CusModalComponent, {size:'sm', backdrop:'static'});
+    modalRef.componentInstance.title = title;
+    modalRef.componentInstance.msg = msg;
+    modalRef.componentInstance.isLock = true;
+    return modalRef.result;
+  }
+
 }

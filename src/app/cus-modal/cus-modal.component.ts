@@ -15,6 +15,8 @@ export class CusModalComponent implements OnInit {
 
   @Input() isConfirm;
 
+  @Input() isLock = false;
+
   constructor(
     public activeModal: NgbActiveModal
   ) {}

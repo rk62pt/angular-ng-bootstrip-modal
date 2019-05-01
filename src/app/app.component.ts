@@ -43,6 +43,10 @@ export class AppComponent  {
     this.cusModalService.showBackdrop("系統訊息", "登入成功!!!!");
   }
 
+  lockOpen() {
+    this.cusModalService.showLockMsg("系統訊息", "登入成功!!!!");
+  }
+
   private getDismissReason(reason: any): string {
     if (reason === ModalDismissReasons.ESC) {
       return 'by pressing ESC';
